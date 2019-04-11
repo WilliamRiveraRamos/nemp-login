@@ -1,0 +1,40 @@
+{
+  "name": "nemp-login",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.5.0",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  },
+  "description": "A login system made with Node, Express, MongoDB, Passport and related technologies.",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamRiveraRamos/nemp-login.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "MongoDB",
+    "Passport"
+  ],
+  "author": "William Rivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamRiveraRamos/nemp-login/issues"
+  },
+  "homepage": "https://github.com/WilliamRiveraRamos/nemp-login#readme"
+}
