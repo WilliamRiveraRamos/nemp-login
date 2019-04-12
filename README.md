@@ -1,5 +1,5 @@
 # NEMP login
-NEMP (Node, Express, MongoDB, Passport) is a login system that you can easyly inplement on your web app. The web app was made with Node, Express, MongoDB, Passport and related technologies.
+NEMP (Node, Express, MongoDB, Passport) is a login system that you can easily implement on your web app. The web app was made with Node, Express, MongoDB, Passport and related technologies.
 
 # Use
 1. Clone this repo
@@ -30,3 +30,8 @@ Click **Logout** and try to access the **Secret Page** (localhost:3000/secret) a
 5. Enter **db.users.find()** to see the username and password you just created.
 
 That's all, You are set!
+
+#### Resources
+[Install MongoDB Community Edition on Windows](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ "Install MongoDB Community Edition on Windows")
+
+[Working with the mongo Shell](https://docs.mongodb.com/manual/mongo/#working-with-the-mongo-shell "Working with the mongo Shell")
