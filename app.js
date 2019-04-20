@@ -4,7 +4,7 @@ var express       = require('express');
 var path          = require('path');
 var cookieParser  = require('cookie-parser');
 var logger        = require('morgan');
-var mongoose      = require('mongoose');
+const MongoClient = require('mongodb');
 var bodyParser    = require('body-parser');
 var passport      = require('passport');
 var LocalStrategy = require('passport-local');
@@ -20,9 +20,14 @@ var registerRouter  = require('./routes/register');
 var loginRouter     = require('./routes/login');
 var logoutRouter    = require('./routes/logout');
 
+
+
+MongoClient.connect('mongodb://WRivera:MDBAwr#20@cluster0-eztma.azure.mongodb.net/nempDB', {useNewUrlParser: true});
+
+
 // MongoDB connection ///
 // mongoose.connect('mongodb://localhost:27017/nempDB', {useNewUrlParser: true});
-mongoose.connect('mongodb://WRivera:MDBAwr#20@cluster0-eztma.azure.mongodb.net/nempDB', {useNewUrlParser: true});
+//mongoose.connect('mongodb://WRivera:MDBAwr#20@cluster0-eztma.azure.mongodb.net/nempDB', {useNewUrlParser: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
