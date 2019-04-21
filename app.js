@@ -22,7 +22,7 @@ var logoutRouter    = require('./routes/logout');
 
 // MongoDB connection ///
 // mongoose.connect('mongodb://localhost:27017/nempDB', {useNewUrlParser: true});
-mongoose.connect('mongodb://WRivera:MDBAwr#20@cluster0-eztma.azure.mongodb.net/nempDB', {useNewUrlParser: true});
+mongoose.connect(process.env.DATABAEURL, {useNewUrlParser: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -72,6 +72,8 @@ app.use(function(err, req, res, next) {
 });
 
 // Server
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(process.env.PORT, process.env.IP, function(){
+  console.log('Running NEMP login Server');
+});
 
 module.exports = app;
