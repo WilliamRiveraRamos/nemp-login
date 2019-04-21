@@ -4,7 +4,7 @@ var passport  = require('passport');
 var router = express.Router();
 
 router.get('/', function(req, res){
-    res.render('login', {title: 'Login Page'});
+    res.render('login', {title: 'Please login!'});
   });
 
   // Login logic
@@ -12,7 +12,6 @@ router.post('/', passport.authenticate('local',
 {
   successRedirect: 'secret',
   failureRedirect: 'login'
-  
   }), function(req, res){
 });
 
