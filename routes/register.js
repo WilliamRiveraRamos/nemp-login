@@ -17,10 +17,10 @@ router.post('/', function(req, res) {
   User.register(newUser, req.body.password, function(err, user){
       if(err) {
         console.log(err);
-        return res.render('index');
+        return res.send('Something wrong! Please try again.');
       }
       passport.authenticate('local')(req, res, function(){
-      res.redirect('/login');
+        res.redirect('/login');
     });
   });
 });
