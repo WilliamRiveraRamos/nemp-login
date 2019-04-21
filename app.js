@@ -21,7 +21,9 @@ var loginRouter     = require('./routes/login');
 var logoutRouter    = require('./routes/logout');
 
 // MongoDB connection ///
-mongoose.connect('mongodb://localhost:27017/nempDB', {useNewUrlParser: true});
+
+mongoose.connect('mongodb://WRivera:MDBAwr#20@cluster0-shard-00-00-eztma.azure.mongodb.net:27017,cluster0-shard-00-01-eztma.azure.mongodb.net:27017,cluster0-shard-00-02-eztma.azure.mongodb.net:27017/nempDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', {useNewUrlParser: true});
+//mongoose.connect('mongodb://localhost:27017/nempDB', {useNewUrlParser: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
