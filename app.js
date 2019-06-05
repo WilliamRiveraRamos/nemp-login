@@ -9,9 +9,10 @@ var bodyParser    = require('body-parser');
 var passport      = require('passport');
 var LocalStrategy = require('passport-local');
 var User          = require('./models/user');
-const port        = 3000;
 
 var app = express();
+
+var http = require('http').Server(app);
 
 // Routes
 var indexRouter     = require('./routes/index');
@@ -74,7 +75,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// Server
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+// Start Server
+http.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', http.address().port);
+});
 
 module.exports = app;
