@@ -20,8 +20,12 @@ var registerRouter  = require('./routes/register');
 var loginRouter     = require('./routes/login');
 var logoutRouter    = require('./routes/logout');
 
+require('dotenv').config()
+
+const dbUrl = process.env.DATABASEURL;
+
 // MongoDB connection //
-mongoose.connect('mongodb://localhost:27017/nempDB', {useNewUrlParser: true});
+mongoose.connect(dbUrl, {useNewUrlParser: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
